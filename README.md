@@ -11,9 +11,11 @@ These guys all have written game engines that combine some aspects of Unity's co
 
 ## LIBRARIES
 
-My initial idea is to use as many existing libraries as possible instead of having to reinvent the wheel. 
+My initial idea is to use as many existing libraries as possible instead of having to reinvent the wheel. After seeing Noel's work on Skytorn and Celeste, I know his engine is going to be amazing.
+However, this project is more of a learning tool for me and a challenging experiment to see how polished of an engine I can write using existing code that is typically meant for web development.
 
-*(Some of the libraries on this list are just possibilities.)*:
+
+### NOTE: *(The items in this list are only possible additions to the engine. Thanks to all of the authors and contibutors of each of these for your hard work and contributions.)*
 * [Electron](http://electron.atom.io/) - Build cross platform desktop apps with JavaScript, HTML, and CSS.
 * [WebGL](https://github.com/KhronosGroup/WebGL) - HTML5 implimentation of OpenGL in the browser.
 * [glMatrix](http://glmatrix.net/) - glMatrix is designed to perform vector and matrix operations stupidly fast!
