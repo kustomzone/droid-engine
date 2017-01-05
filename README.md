@@ -1,11 +1,19 @@
-#### DROID ENGINE TECH
+# DROID ENGINE TECH
+
+## CONCEPT
 **Droid Engine** is a game engine designed around the **SCENE->ENTITY->COMPONENT** model.
 
 It is written in **ES6 Javascript** and rendered in an **Electron** shell using **WebGL**.
 The concept for this engine is based on similar engines written by [**Matt Thorson**](https://twitter.com/MattThorson),
 [**Noel Berry**](https://twitter.com/NoelFB), and [**Kyle Pulver**](https://twitter.com/kylepulver).
 
-Some of the Libraries Used *(Some of the libraries on this list are just possibilities.)*:
+These guys all have written game engines that combine some aspects of Unity's component architecture while also using concepts derived from [**Chevy Ray's**](https://twitter.com/ChevyRay) Flashpunk and/or [**Adam Saltsman's**](https://twitter.com/ADAMATOMIC) Flixel.
+
+## LIBRARIES
+
+My initial idea is to use as many existing libraries as possible instead of having to reinvent the wheel. 
+
+*(Some of the libraries on this list are just possibilities.)*:
 * [Electron](http://electron.atom.io/) - Build cross platform desktop apps with JavaScript, HTML, and CSS.
 * [WebGL](https://github.com/KhronosGroup/WebGL) - HTML5 implimentation of OpenGL in the browser.
 * [glMatrix](http://glmatrix.net/) - glMatrix is designed to perform vector and matrix operations stupidly fast!
