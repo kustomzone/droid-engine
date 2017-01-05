@@ -9,6 +9,16 @@ The concept for this engine is based on similar engines written by [**Matt Thors
 
 These guys all have written game engines that combine some aspects of Unity's component architecture while also using concepts derived from [**Chevy Ray's**](https://twitter.com/ChevyRay) Flashpunk and/or [**Adam Saltsman's**](https://twitter.com/ADAMATOMIC) Flixel.
 
+## USAGE
+
+```javascript
+npm install // Installs all of the dependencies.
+```
+
+```javascript
+npm run start // Runs the electron build command
+```
+
 ## LIBRARIES
 
 My initial idea is to use as many existing libraries as possible instead of having to reinvent the wheel. After seeing Noel's work on Skytorn and Celeste, I know his engine is going to be amazing.
