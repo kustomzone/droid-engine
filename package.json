@@ -1,34 +1,41 @@
 {
-  "name": "droid-engine",
-  "version": "0.0.1",
-  "description": "A WebGL based game written in ES6 and wrapped in an Electron shell.",
-  "main": "index.js",
-  "scripts": {
-    "start": "electron ./test-game/app.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/shanedroid32/droid-engine.git"
-  },
-  "keywords": [
-    "game",
-    "engine",
-    "electron",
-    "webgl",
-    "es6"
-  ],
-  "author": "Shane M. Ross",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/shanedroid32/droid-engine/issues"
-  },
-  "homepage": "https://github.com/shanedroid32/droid-engine#readme",
-  "devDependencies": {
-    "babel-core": "^6.21.0",
-    "babel-loader": "^6.2.10",
-    "babel-preset-es2015": "^6.18.0",
-    "electron": "^1.4.13",
-    "mousetrap": "^1.6.0",
-    "webpack": "^1.14.0"
-  }
+    "name": "droid-engine",
+    "version": "0.0.1",
+    "description": "A WebGL based game written in ES6 and wrapped in an Electron shell.",
+    "main": "index.js",
+    "scripts": {
+        "start": "electron ./test-game/app.js",
+        "build": "webpack"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/shanedroid32/droid-engine.git"
+    },
+    "keywords": [
+        "game",
+        "engine",
+        "electron",
+        "webgl",
+        "es6"
+    ],
+    "author": "Shane M. Ross",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/shanedroid32/droid-engine/issues"
+    },
+    "homepage": "https://github.com/shanedroid32/droid-engine#readme",
+    "devDependencies": {
+        "babel-core": "^6.21.0",
+        "babel-loader": "^6.2.10",
+        "babel-preset-es2015": "^6.18.0",
+        "electron": "^1.4.13",
+        "file-loader": "^0.9.0",
+        "json-loader": "^0.5.4",
+        "mousetrap": "^1.6.0",
+        "url-loader": "^0.5.7",
+        "webpack": "^1.14.0"
+    },
+    "dependencies": {
+        "pixi.js": "^4.3.1"
+    }
 }

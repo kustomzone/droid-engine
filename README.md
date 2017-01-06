@@ -16,7 +16,11 @@ npm install // Installs all of the dependencies.
 ```
 
 ```javascript
-npm run start // Runs the electron build command
+npm run build // Runs Webpack to build the engine and the game.
+```
+
+```javascript
+npm run start // Runs Electron and launches the game window.
 ```
 
 ## LIBRARIES
