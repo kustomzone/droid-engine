@@ -46,7 +46,19 @@
 
 	'use strict';
 
-	console.log('Droid Engine loaded.');
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var Engine = function Engine() {
+	  _classCallCheck(this, Engine);
+
+	  console.log('Engine initialized.');
+	};
+
+	exports.default = Engine;
 
 /***/ }
 /******/ ]);

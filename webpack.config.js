@@ -3,8 +3,8 @@ const path = require('path')
 
 const config = {
     entry: {
-        game: './test-game/src/game.js',
-        engine: './DroidEngine/src/Engine.js'
+        game: './test-game/src/game.js'
+        //engine: './test-game/src/DroidEngine/src/Engine.js'
     },
     output: {
         filename: '[name].js',

@@ -1,6 +1,5 @@
 const electron = require('electron')
 const { app, BrowserWindow, globalShortcut } = electron
-const Mousetrap = require('../node_modules/mousetrap/mousetrap')
 
 app.on('ready', () => {
 
