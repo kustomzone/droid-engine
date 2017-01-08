@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+    <meta name="description" content="WebGL Game Engine">
+    <meta name="keywords"    content="WebGL Game Engine">
+    <title>Droid Engine - Demo1</title>
+	
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic|Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+
+    <style>
+	
+    body {
+        background-color: #000000;
+    }
+	
+	h3 {
+	    font-size: 1.2em;
+        font-family: 'Tahoma', monospace;
+        color: #A09090;
+	}
+	
+    #typer { 
+        font-size: 1.3em;
+        font-family: 'Roboto', monospace;
+        color: #8D8B8A;
+    }
+	
+	</style>
+	
+	<!-- Text Typer -->
+	<script>
+	
+    var texts = "         Droid Engine Initialized... \n Game Running...";
+    var audio = new Audio('./snds/keys.wav');
+	audio.volume = 0;
+    var charz = 0;
+    var speed = 133;
+	
+    function types(text,id) {
+        newTxt = document.getElementById(id).innerHTML;
+        chars = texts.charAt(charz);
+        newTxt += escape(chars);
+        charz++;
+		if (charz <= text.length) { playsnd(chars); } else { audio.volume = 0; return; }
+        document.getElementById(id).innerHTML = newTxt;
+    }
+	
+    function playsnd(chars) {
+        var part;
+        if (chars == '\n' || chars == " ") {
+            audio.pause();
+            clearInterval(part);
+        } else {
+            audio.currentTime = 0;
+			audio.volume = 0.5;
+            audio.play();
+            part = setInterval(function() {
+                if (audio.currentTime > 0.2) {
+                    audio.pause();
+					audio.volume = 0;
+                    clearInterval(part);
+                }
+            }, 10);
+        }
+    }
+	
+    function escape(newline) {
+        return (newline === '\n') ? '<br>' : newline;
+    }
+	
+    for (var i=0;i<texts.length;i++) {
+        if (i==0) {
+            setInterval(2000);
+            setInterval(function(){types(texts,"typer")},speed);
+        }
+    }
+	
+	</script>
+
+</head>
+
+<body>
+	<h3  id="title">Welcome</h3>
+	<div id="typer"></div>
+	
+	<script>if (typeof module === 'object') { window.module = module; module = undefined; }</script>
+    <script src="./dist/engine.js"></script>
+    <script src="./dist/game.js"></script>
+	<script>if (window.module) { module = window.module; }</script>
+	
+</body>
+</html>
