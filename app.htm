@@ -16,15 +16,45 @@
     }
 	
 	h3 {
-	    font-size: 1.2em;
+	    font-size: 1.1em;
         font-family: 'Tahoma', monospace;
         color: #A09090;
 	}
 	
     #typer { 
-        font-size: 1.3em;
+        font-size: 1.2em;
         font-family: 'Roboto', monospace;
-        color: #8D8B8A;
+        color: #9D9B9A;
+    }
+	
+    /* terminal style cursor */
+    #cursor {
+        color: #009B00;
+        font-size: 1em;
+        opacity: 0;
+        height: 10px;
+        -webkit-animation: blink 0.6s infinite;
+        -moz-animation:    blink 0.6s infinite;
+        animation:         blink 0.6s infinite;
+        animation-direction: alternate;
+    }
+	
+    @keyframes blink {
+        100% {
+            opacity: 0;
+        }
+    }
+	
+    @-webkit-keyframes blink {
+        100% {
+            opacity: 0;
+        }
+    }
+	
+    @-moz-keyframes blink {
+        100% {
+            opacity: 0;
+        }
     }
 	
 	</style>
@@ -32,19 +62,41 @@
 	<!-- Text Typer -->
 	<script>
 	
-    var texts = "         Droid Engine Initialized... \n Game Running...";
-    var audio = new Audio('./snds/keys.wav');
-	audio.volume = 0;
-    var charz = 0;
-    var speed = 133;
+    var output = "        Droid Engine Initialized \n Game Running \nEnter Command:\n";
+	var blinky = "▌";
+	var newTxt = "";
+	var charz  = 0;
+    var speed  = 130;
+    var audio  = new Audio('./snds/keys.wav');
 	
-    function types(text,id) {
-        newTxt = document.getElementById(id).innerHTML;
-        chars = texts.charAt(charz);
+    function types(text, id) {
+        chars = text.charAt(charz);
         newTxt += escape(chars);
         charz++;
-		if (charz <= text.length) { playsnd(chars); } else { audio.volume = 0; return; }
-        document.getElementById(id).innerHTML = newTxt;
+        if (charz <= text.length) {
+            playsnd(chars);
+            document.getElementById(id).innerHTML = newTxt;
+        } else if (blinky) {
+            audio.volume = 0;
+			var kursor = document.getElementById("cursor");
+			kursor.style.opacity = 1;
+            kursor.appendChild(document.createTextNode(blinky));
+			window.addEventListener("keypress", checkInput);
+			blinky = "";
+			return;
+        }
+    }
+	
+    function checkInput(event) {
+        var keyCode = event.hasOwnProperty('which') ? event.which : event.keyCode;
+        var input = String.fromCharCode(keyCode).toUpperCase();
+        output = "\n" + input + " Received\n";
+        charz = 0;
+        var kursor = document.getElementById("cursor")
+        // while (kursor.hasChildNodes()) {
+            kursor = "";
+        // }
+        // types(input, "cursor");
     }
 	
     function playsnd(chars) {
@@ -70,12 +122,12 @@
         return (newline === '\n') ? '<br>' : newline;
     }
 	
-    for (var i=0;i<texts.length;i++) {
-        if (i==0) {
-            setInterval(2000);
-            setInterval(function(){types(texts,"typer")},speed);
-        }
+    setInterval(1500);
+    if (charz <= output.length) {
+        setInterval( () => { types(output, "typer") } , speed);
     }
+	
+	// to do: get cursor input
 	
 	</script>
 
@@ -83,7 +135,7 @@
 
 <body>
 	<h3  id="title">Welcome</h3>
-	<div id="typer"></div>
+	<div id="typer"></div><div id="cursor"></div>
 	
 	<script>if (typeof module === 'object') { window.module = module; module = undefined; }</script>
     <script src="./dist/engine.js"></script>

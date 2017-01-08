@@ -54,3 +54,7 @@ However, this project is more of a learning tool for me and a challenging experi
 * [RethinkDB](https://rethinkdb.com/) - The open-source database for the realtime web.
 * [Jasmine](http://jasmine.github.io/) - DOM-less simple JavaScript testing framework. Another possible test library.
 * [Matter.js](http://brm.io/matter-js/) - Matter.js is a 2D physics engine for the web.
+
+## License
+
+[MIT](https://github.com/babel/babel/blob/master/LICENSE)
