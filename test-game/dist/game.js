@@ -39,28 +39,39 @@
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
 /******/ })
-
 /************************************************************************/
-
 /******/ ([
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _Engine         = __webpack_require__(1);
-	var _Engine2        = _interopRequireDefault(_Engine);
-	var _Entity         = __webpack_require__(4);
-	var _Entity2        = _interopRequireDefault(_Entity);
-	var _Component      = __webpack_require__(5);
-	var _Component2     = _interopRequireDefault(_Component);
-	var _Scene          = __webpack_require__(6);
-	var _Scene2         = _interopRequireDefault(_Scene);
-	var _Player         = __webpack_require__(8);
-	var _Player2        = _interopRequireDefault(_Player);
-	var _Level          = __webpack_require__(10);
-	var _Level2         = _interopRequireDefault(_Level);
-	var _TestComponent  = __webpack_require__(7);
+	var _Engine = __webpack_require__(1);
+
+	var _Engine2 = _interopRequireDefault(_Engine);
+
+	var _Entity = __webpack_require__(4);
+
+	var _Entity2 = _interopRequireDefault(_Entity);
+
+	var _Component = __webpack_require__(5);
+
+	var _Component2 = _interopRequireDefault(_Component);
+
+	var _Scene = __webpack_require__(6);
+
+	var _Scene2 = _interopRequireDefault(_Scene);
+
+	var _Player = __webpack_require__(8);
+
+	var _Player2 = _interopRequireDefault(_Player);
+
+	var _Level = __webpack_require__(10);
+
+	var _Level2 = _interopRequireDefault(_Level);
+
+	var _TestComponent = __webpack_require__(7);
+
 	var _TestComponent2 = _interopRequireDefault(_TestComponent);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }

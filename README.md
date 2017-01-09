@@ -57,4 +57,6 @@ However, this project is more of a learning tool for me and a challenging experi
 
 ## License
 
-[MIT](https://github.com/babel/babel/blob/master/LICENSE)
+[MIT](https://github.com/shanedroid32/droid-engine/blob/master/LICENSE)
+
+---

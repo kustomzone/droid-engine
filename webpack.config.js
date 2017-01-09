@@ -1,15 +1,14 @@
-
 const webpack = require('webpack')
 const path = require('path')
 
 const config = {
     entry: {
-        game: './src/game.js'
-        //engine: './src/DroidEngine/src/Engine.js'
+        game: './test-game/src/game.js'
+        //engine: './test-game/src/DroidEngine/src/Engine.js'
     },
     output: {
         filename: '[name].js',
-        path: path.resolve(__dirname, './dist')
+        path: path.resolve(__dirname, './test-game/dist')
     },
     node: {
         fs: "empty"
